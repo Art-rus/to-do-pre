@@ -82,11 +82,12 @@ items.forEach(function (item) {
 formElement.addEventListener("submit", function (evt) {
   evt.preventDefault();
   const inputItem = createItem(inputElement.value);
-  
-  if (inputElement.value) {
+
+  if(inputElement.value){
     listElement.prepend(inputItem);
     items = getTasksFromDOM();
     saveTasks(items);
     inputElement.value = "";
   }
+  
 });
